@@ -1,0 +1,14 @@
+<form class="width-full">
+    Please enter your Login Id or phone number to search for your account.<br>
+
+    <mat-form-field class="width-full">
+        <input matInput type="text" name="userName" ngModel [(ngModel)]="data.username" [ngModelOptions]="{standalone: true}" placeholder="Login ID/ Email/ Mobile No" required #userName="ngModel">
+        <mat-error *ngIf="userName.invalid">Please enter a valid Login ID/ Email/ Mobile No</mat-error>
+    </mat-form-field>
+    <br>
+    <br>
+    <div>
+        <button mat-raised-button color="primary" type="submit">Search</button>
+        <button mat-raised-button color="warn" style="float: right;" (click)="onNoClick()" type="submit">Cancel</button>
+    </div>
+</form>
